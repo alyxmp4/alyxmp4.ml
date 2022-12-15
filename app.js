@@ -4,7 +4,8 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let morgan = require('morgan');
 let chalk = require('chalk');
-let routeUtils = require('express-recursive-routes');
+
+
 let expressHbs = require('express-handlebars');
 let moment = require('moment');
 let hbs = require('hbs')
@@ -47,7 +48,7 @@ app.use(express.static(__dirname + '/node_modules/bootstrap/dist/'));
 app.use(express.static(__dirname + '/node_modules/bootstrap-icons/font/'));
 
 
-routeUtils.mountRoutes(app);
+app.use('/', require('./routes/index'));
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
