@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "name": "postcards service by alyx",
+    "img": "https://i.postimg.cc/B6nhs8CM/check-B19-D659.png",
+    "link": "postcards",
+    "description": "fun purposes made postcards delievering services for my school event :) my site reads ready code i gave to addressee and shows my correct postcard for this person, you can test it using code 1111111111, it's my first project, so, don't be that skeptic 😊",
+    "github": "https://github.com/alyxmp4/postcards-alyxmp4-ml",
+    "readme": "https://raw.githubusercontent.com/alyxmp4/postcards-alyxmp4-ml/main/README.md",
+    "url": "https://postcards.alyxmp4.ml"
+  }
+]

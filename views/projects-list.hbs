@@ -1,0 +1,42 @@
+<h2 class="wow fadeInUp">all of my projects in this page</h2>
+
+<div class="cards wow fadeInUp" data-wow-delay="0.6s" data-wow-offset="10">
+  {{#each list}}
+    <div class="card mb-3">
+      <img src="{{this.img}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><a href="{{this.url}}">{{this.name}} <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h5>
+        <p class="card-text">{{this.description}}</p>
+        <p class="card-text"><small class="text-muted">{{#if this.github}} <a href="{{this.github}}">Open source <i class="fa-brands fa-github"></i>  </a> {{else}} Closed source {{/if}}</small></p>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+<style>
+  .cards {
+    margin-top: 6%;
+    color: black;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .card {
+    padding: .1rem;
+  }
+  
+  .card a i {
+    font-size: 20px;
+  }
+  
+  
+  @media (min-width: 801px) {
+    .card {
+      width: 47%;
+      display: inline-block;
+    }
+  }
+</style>

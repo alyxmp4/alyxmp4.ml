@@ -1,0 +1,22 @@
+.modal p {
+  padding: 2%;
+  margin-left: 8%;
+  margin-right: 8%;
+  color: #cacaca;
+}
+
+.main {
+  width: 100%;
+  text-align: left;
+  align-content: left;
+}
+
+@media (min-width: 801px) {
+  .headr {
+    display: inline;
+  }
+  
+  .methods {
+    display: inline;
+  }
+}
