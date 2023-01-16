@@ -24,5 +24,11 @@ router.get('/projects/', (req, res, next) => {
 
 });
 
+// IGNORE IT'S JUST FOR FUN
+
+router.get('/мы-любим-бизе', (req, res, next) => {
+  res.redirect('https://youtu.be/dQw4w9WgXcQ');
+})
+
 
 module.exports = router;
