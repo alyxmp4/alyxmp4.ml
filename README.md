@@ -1,4 +1,4 @@
-# website introduction
+# О вебсайте
 
 [![ExpressJS](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com)
 [![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org)
@@ -7,7 +7,9 @@
 [![JS](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://www.javascript.com/)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 
-to get started you have to make sure that you have minimal knowledge about web development and how interned works. Website backend is based on ExpressJS framework for NodeJS, which helps us on working with non-client side and handle data, you can learn about it all in [NodeJS website/documentation](https://nodejs.org) and [ExpressJS website](https://expressjs.com)
+> Зайдите в каждый из папок в репозиторий, чтобы узнать что как работает, я расписал там всё от А до Я для новичков, или просто заинтересованных людей, это не профессиональный проект, это лишь сайт одного человека, на*** вас пошлю если услышу критику от диванных прогеров, не для вас я свой код выкладываю в Гитхаб
+
+Для начала работы вам нужны минимальные знания о том, как работают веб сервера, как обрабатываются запросы и должны быть знакомы с фреймворком [NodeJS](https://nodejs.org) и библиотекой для разработки серверов [ExpressJS](https://expressjs.com)
 
 > Node.js® is an open-source, cross-platform JavaScript runtime environment.
 
@@ -16,47 +18,52 @@ to get started you have to make sure that you have minimal knowledge about web d
 <br/>
 Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 
-# by the way, let's start
+# Теперь к делу
 
-of course, feel free to change website for your own, it's open source and you're allowed to!
+> Сайт является открытым и имеет открытый исходный код, вы в праве изменять составляющие сайта как хотите и распростронять их, но продавать исходные коды.
 
-first of all you need to clone this repository to your Pc
+Сперва понадобится клонировать репозиторий на ваш сервер
 
 ```
 git clone https://github.com/alyxmp4/alyxmp4.ml
 ```
-and nah, of course you need git installed to your PC, I hope you know how to google it, right?
+> Естественно, вам нужна система контроля версиями [Git](https://gitlab.com), гуглите, если не знаете что это
 
-and then go to the directory and install all needed dependencies
+> Потом, зайдя в клонированный репозиторий нужно установить нужные зависимости используя менеджер пакетов
 
 ```bash
 cd alyxmp4.ml
-npm install
+npm install // или yarn add pkg.json
 ```
 
-and of course you need [NPM](https://npmjsmcom) and [NodeJS](https://nodejs.org) installed
+Да, тебе нужен менеджер пакетов [NPM](https://npmjsmcom) и он обычно всегда идёт вместе с [NodeJS](https://nodejs.org), но я же не знаю что там у вас в сервере может твориться, верно?)
 
-you can easily start the server now
+Теперь можно запустить сервер
 ```bash
 DEBUG=alyxmp4.ml:* npm start // for linux/MacOSX
 set DEBUG=alyxmp4.ml:* & npm start // for Windows
 ```
 
-or you can use nodemon instead
+или воспользоваться nodemon
+
 > nodemon is npm module which is very useful while developing NodeJS projects, it restarts app every time it will notices that files have changed, so you don't need to restart app by yourself
+> простыми словами, чел, это просто перезагружает файлы каждый раз, как ты изменил файлы, очень полезная вещь в разработке
 
 ```bash
 npm install -g nodemon
 DEBUG=alyxmp4.ml:* nodemom bin/www
 ```
 
-now you can go `http://localhost:3000` or `http://127.0.0.1:3000` and see my website :)
+теперь заходим на `http://localhost:3000` или `http://127.0.0.1:3000` (это одно и то же) и увидеть ваш сайт :)
 
-# deploying to production
+# Деплоинг на хостинг
 
-I've used [Vercel](https://vercel.com) as website hosting and [Freenom](https://www.freenom.com/en/index.html?lang=en) for domain registration
+Я использовал [Vercel](https://vercel.com) как хостинг и [Freenom](https://www.freenom.com/en/index.html?lang=en) для регистрации домена
+> Простыми словами, хостинг нужен для того, чтобы размещать ваши проекты/сайте в облако, чтобы тот работал круглосуточно и туда могли заходить люди используя домен, домен же нужен для удобства, вы можете увидеть сайт введя IP адрес сервера, это будет огромный набор цифр типо 137.26.96.286 ну или же вы можете привязать домен к серверу и всегда получать доступ через например alyxmp4.ml, введя это в браузере
 
-I've used Vercel's [Serverless Functions ](https://vercel.com/docs/concepts/functions/serverless-functions) feature to deploy my app, now to use it you need to configure Vercel.json
+Я использовал [Serverless Functions ](https://vercel.com/docs/concepts/functions/serverless-functions) от Верселя, чтобы захостить приложение
+
+Теперь настроим vercel.json
 
 ```json
 {
@@ -83,7 +90,7 @@ I've used Vercel's [Serverless Functions ](https://vercel.com/docs/concepts/func
 }
 ```
 
-so now you can [create Github Repository](https://github.com/new) and deploy all of our files to it
+Теперь можно создать [Github Репозиторий](https://github.com/new) и залить туда все файлы 
 
 ```bash
 git init -b main
@@ -92,13 +99,13 @@ git push origin (BRANCH)*
 git remote add origin (URL)**
 git push origin (BRANCH)*
 ``` 
--- you will be asked to log into your github account via username/email and access token, read about logging into git CLI [there](https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html) --
+-- Вас попросят войти в Git, тогда используете CLI (command line interface), [подробнее здесь](https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html) --
 
 
-\* put your repository main branch name
+\* сюда имя вашей ветки в репозиторий
 <br/>
-\** put your github repository url link
+\** сюда ссылку на ваш репозиторий
 
-and then you have to log into your vercel account and make new project, after that deploy your project from GitHub repo, and just start it, everything is configured already so you don't need to worry
+Теперь просто заходите на сайт Верселя, логинитесь, деплоите ваше приложения с Гитхаба и всё теперь встало на свои места
 
-* That's all!! :)* thanks for attention
+* На этом всё. Благодарю за внимание!
